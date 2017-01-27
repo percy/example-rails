@@ -4,6 +4,9 @@ require 'rails/test_help'
 require 'capybara/rails'
 require 'capybara/poltergeist'
 
+Percy::Capybara.initialize_build
+at_exit { Percy::Capybara.finalize_build }
+
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all

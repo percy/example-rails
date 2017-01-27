@@ -16,6 +16,7 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'percy-capybara'
 end
 
 group :production do
