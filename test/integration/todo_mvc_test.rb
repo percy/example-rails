@@ -16,10 +16,14 @@ class TodoMvcTest < ActionDispatch::IntegrationTest
   test "allow me to add todo items" do
     visit "/"
 
+    Percy::Capybara.snapshot(page, name: 'Empty todo list')
+
     enter_item(TODO_ITEM_ONE)
     assert_items [TODO_ITEM_ONE]
     enter_item(TODO_ITEM_TWO)
     assert_items [TODO_ITEM_ONE, TODO_ITEM_TWO]
+
+    Percy::Capybara.snapshot(page, name: 'Todo list with 2 todos')
   end
 
   private
