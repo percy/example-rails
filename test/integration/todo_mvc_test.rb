@@ -1,10 +1,6 @@
 require 'test_helper'
 
 class TodoMvcTest < ActionDispatch::IntegrationTest
-  # Capybara / PhantomJS freezes if we don't allow it time to complete
-  # some actions.  0.05 works for me.  YMMV.
-  SLEEP_TIME = 0.05
-
   def setup
     DatabaseCleaner.start
   end
@@ -16,19 +12,20 @@ class TodoMvcTest < ActionDispatch::IntegrationTest
   test "allow me to add todo items" do
     visit "/"
 
-    Percy::Capybara.snapshot(page, name: 'Empty todo list')
+    Percy.snapshot(page, name: 'Empty todo list')
 
     enter_item(TODO_ITEM_ONE)
     assert_items [TODO_ITEM_ONE]
     enter_item(TODO_ITEM_TWO)
     assert_items [TODO_ITEM_ONE, TODO_ITEM_TWO]
 
-    Percy::Capybara.snapshot(page, name: 'Todo list with 2 todos')
+    Percy.snapshot(page, name: 'Todo list with 2 todos')
   end
 
   private
 
   def assert_items(ary)
+    assert_selector("#todos li", count: ary.length)
     assert_equal ary, todo_items.map { |el| el.find(".view label").text }
   end
 
@@ -37,13 +34,7 @@ class TodoMvcTest < ActionDispatch::IntegrationTest
   TODO_ITEM_THREE = 'book a doctors appointment'
 
   def todo_items
-    sleep(SLEEP_TIME)
     page.all("#todos li")
-  end
-
-  def filters
-    sleep(SLEEP_TIME)
-    page.all("#filters li a")
   end
 
   def create_standard_items
@@ -54,7 +45,6 @@ class TodoMvcTest < ActionDispatch::IntegrationTest
 
   def enter_item(text)
     fill_in 'new-todo', with: text
-    find('#new-todo').native.send_key(:enter)
-    sleep(SLEEP_TIME)
+    find('#new-todo').send_keys(:enter)
   end
 end

@@ -2,10 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'capybara/rails'
-require 'capybara/poltergeist'
-
-Percy::Capybara.initialize_build
-MiniTest.after_run { Percy::Capybara.finalize_build }
+require 'percy'
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
@@ -14,16 +11,7 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app,
-    debug: false,
-    js_errors: true,
-    timeout: 180
-  )
-end
-
-Capybara.default_driver = :poltergeist
-
+Capybara.default_driver = :selenium_chrome_headless
 
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
