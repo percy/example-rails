@@ -10,7 +10,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem "jquery-rails"
 gem 'turbolinks', github: 'rails/turbolinks'
-gem 'puma'
+gem 'puma', '~> 3.10'
 
 group :test do
   gem 'capybara'
