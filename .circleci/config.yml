@@ -4,7 +4,7 @@ default_steps: &default_steps
   steps:
     - checkout
     - run: gem update --system
-    - run: bundle install
+    - run: gem install puma && bundle install
     - run: bundle exec rake test
 
 jobs:
