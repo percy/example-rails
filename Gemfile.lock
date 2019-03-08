@@ -109,7 +109,7 @@ GEM
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
     public_suffix (3.0.3)
-    puma (3.6.2)
+    puma (3.12.0)
     rack (2.0.6)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -187,7 +187,7 @@ DEPENDENCIES
   jquery-rails
   percy-capybara
   poltergeist
-  puma
+  puma (~> 3.12)
   rails (~> 5.0.0)
   rails_12factor
   sass-rails
