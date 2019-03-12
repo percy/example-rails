@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "scripts": {},
+  "devDependencies": {
+    "@percy/agent": "^0.1.15"
+  }
+}
