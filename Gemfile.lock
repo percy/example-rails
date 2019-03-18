@@ -67,7 +67,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
-    database_cleaner (1.5.3)
+    database_cleaner (1.7.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.25)
