@@ -102,7 +102,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     percy-capybara (4.0.0.pre.beta2)
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (3.12.1)
     rack (2.0.7)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -185,7 +185,7 @@ DEPENDENCIES
   database_cleaner
   jquery-rails
   percy-capybara (~> 4.0.0.pre.beta2)
-  puma (~> 3.10)
+  puma (~> 3.12)
   rails (~> 5.2.2)
   rails_12factor
   sass-rails
