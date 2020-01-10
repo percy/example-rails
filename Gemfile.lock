@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/rails/turbolinks.git
+  remote: https://github.com/rails/turbolinks.git
   revision: 80216ce9d89920bf073709405e3fce6d0a3ccd9a
   specs:
     turbolinks (3.0.0)
@@ -161,7 +161,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.1)
+    sqlite3 (1.4.2)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -197,4 +197,4 @@ RUBY VERSION
    ruby 2.4.5p335
 
 BUNDLED WITH
-   1.17.3
+   2.1.2
