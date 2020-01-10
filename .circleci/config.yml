@@ -3,7 +3,7 @@ version: 2.1
 default_steps: &default_steps
   steps:
     - checkout
-    - run: gem update --system
+    - run: sudo gem update --system
     - run: bundle install && npm install
     - run: npx percy exec -- bundle exec rake test
 
