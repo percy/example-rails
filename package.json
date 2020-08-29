@@ -2,6 +2,6 @@
   "private": true,
   "scripts": {},
   "devDependencies": {
-    "@percy/agent": "^0.28.0"
+    "@percy/agent": "^0.28.1"
   }
 }
