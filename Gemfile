@@ -18,7 +18,7 @@ group :test do
   gem 'capybara', '~>3.33'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-  gem 'percy-capybara', '~> 4.3.1'
+  gem 'percy-capybara', '~> 4.3.3'
 end
 
 group :production do
