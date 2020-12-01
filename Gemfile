@@ -12,7 +12,7 @@ gem 'jquery-rails'
 gem 'turbolinks', github: 'rails/turbolinks'
 # Pin Puma to a recent-ish version that supports OpenSSL, which is
 # what the CircleCI environment has.
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.1'
 
 group :test do
   gem 'capybara', '~>3.34'
