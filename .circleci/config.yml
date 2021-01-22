@@ -8,21 +8,14 @@ default_steps: &default_steps
     - run: npx percy exec -- bundle exec rake test
 
 jobs:
-  ruby_latest_with_percy:
+  test:
     # This is the one environment where we'll capture and upload snapshots in CI.
     docker:
-      - image: circleci/ruby:latest-node-browsers
-    <<: *default_steps
-  ruby_25:
-    docker:
-      - image: circleci/ruby:2.5-node-browsers
-    environment:
-      PERCY_ENABLE: 0
+      - image: circleci/ruby:2.7-node-browsers
     <<: *default_steps
 
 workflows:
   version: 2
   test:
     jobs:
-      - ruby_latest_with_percy
-      - ruby_25
+      - test
