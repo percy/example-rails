@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "03:00"
+    timezone: US/Central
+  ignore:
+  - dependency-name: database_cleaner
+    versions:
+    - 2.0.0
+    - 2.0.1
+  - dependency-name: puma
+    versions:
+    - 5.2.1
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "03:00"
+    timezone: US/Central
