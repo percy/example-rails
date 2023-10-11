@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 
 ruby '~> 2.4'
 
-gem 'rails', '~> 5.2.6'
+gem 'rails', '~> 7.1.0'
 
 gem 'sqlite3'
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.8'
 gem 'uglifier'
 gem 'coffee-rails'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.5.0'
 gem 'turbolinks', github: 'rails/turbolinks'
 # Pin Puma to a recent-ish version that supports OpenSSL, which is
 # what the CircleCI environment has.
