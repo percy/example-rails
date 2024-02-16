@@ -15,7 +15,7 @@ gem 'turbolinks', github: 'rails/turbolinks'
 gem 'puma', '~> 5.5'
 
 group :test do
-  gem 'capybara', '~>3.35'
+  gem 'capybara', '~> 3.35', '>= 3.35.3'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'percy-capybara', '~> 4.3.3'
