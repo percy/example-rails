@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 
 ruby '~> 2.4'
 
-gem 'rails', '~> 5.2.6'
+gem 'rails', '~> 7.0.0'
 
 gem 'sqlite3'
-gem 'sass-rails'
+gem 'sass-rails', '>= 6.0.0'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
